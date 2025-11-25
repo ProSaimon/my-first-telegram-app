@@ -53,6 +53,12 @@
             cursor: pointer;
             background-size: cover;
             background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         button:hover {
             transform: scale(1.05);
@@ -85,7 +91,7 @@
             <button onclick="increment()">➕ Увеличить</button>
             <button onclick="decrement()">➖ Уменьшить</button>
             <button onclick="sendData()">📤 Отправить данные</button>
-            <button class="image-button" style="background-image: url('../resources/cat1.jpg')"> Я - кнопка с самосознанием!!! </button>
+            <button class="image-button" style="background-image: url('https://raw.githubusercontent.com/ProSaimon/my-first-telegram-app/main/resources/cat1.jpg')" onclick="showCat()">🐱 Котик</button>
         </div>
         
         <div class="status" id="status">
@@ -258,6 +264,15 @@
             tg.showPopup({
                 title: 'Успешно!',
                 message: `Значение ${counter} отправлено`,
+                buttons: [{ type: 'ok' }]
+            });
+        }
+        
+        // Функция для кнопки с котиком
+        function showCat() {
+            tg.showPopup({
+                title: 'Мяу! 🐱',
+                message: 'Это тестовая кнопка с котиком!',
                 buttons: [{ type: 'ok' }]
             });
         }
