@@ -45,7 +45,15 @@
             margin: 5px;
             transition: transform 0.2s;
         }
-        
+        .image-button {
+            width: 150px;
+            height: 150px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-size: cover;
+            background-position: center;
+        }
         button:hover {
             transform: scale(1.05);
         }
@@ -71,6 +79,7 @@
             <button onclick="increment()">➕ Увеличить</button>
             <button onclick="decrement()">➖ Уменьшить</button>
             <button onclick="sendData()">📤 Отправить данные</button>
+            <button class="image-button" style="background-image: url('images.jpg')"> Я - кнопка с самосознанием!!! </button>
         </div>
         
         <div style="margin-top: 30px; font-size: 14px; opacity: 0.8;">
